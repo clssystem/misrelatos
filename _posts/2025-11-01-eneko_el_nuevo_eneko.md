@@ -7,7 +7,7 @@ categories: [Eneko, Ficción Histórica]
 tags: [Las aventuras de Eneko] 
 keywords: [Eneko Jorajuría, Viaje de retorno a España]
 imageX: '/assets/images/2025/09/vuelaalto.webp'
-excerpt: 'De cómo cambia la vida de Eneko Jorajuría'
+description: 'De cómo cambia la vida de Eneko Jorajuría'
 tituloRelatoPrincipal: 'Las aventuras de Eneko Jorajuría'
 order: 10
 ---

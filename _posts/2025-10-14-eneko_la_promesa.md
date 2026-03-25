@@ -7,7 +7,7 @@ categories: [Eneko, Ficción Histórica]
 tags: [Las aventuras de Eneko] 
 keywords: [Eneko Jorajuría, Viaje de retorno a España]
 imageX: '/assets/images/2025/09/vuelaalto.webp'
-excerpt: Una aventura juvenil de Eneko Jorajuría
+description: Una aventura juvenil de Eneko Jorajuría
 order: 100
 ---
 «¡Ya eres mío!», se dijo el joven Eneko mientras vigilaba con impaciencia el camino por el que un escuálido jabalí descendía por la ladera del monte para saciar su sed en el arroyo. Hacía ya unos días que lo tenía localizado: lo habían delatado las huellas de sus pezuñas, marcadas de manera muy profunda en el sendero, y el rastro de los me-chones de su pelo recio, enredados en las zarzas que estrechaban el camino. 

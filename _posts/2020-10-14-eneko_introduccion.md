@@ -2,12 +2,11 @@
 title: "Introducción"
 date: 2020-10-14 06:00
 author: diariodeunparkinsoniano
-author: Antonio Liberal Irigoyen
 comments: true
 categories: [Eneko, Ficción Histórica]
 tags: [Las aventuras de Eneko] 
 keywords: [Eneko Jorajuría, Viaje de retorno a España]
-excerpt: 'Introducción a los relatos sobre Eneko Jorajuría'
+description: 'Introducción a los relatos sobre Eneko Jorajuría'
 image:
   path: /assets/images/bg-relatos.jpg
   alt: image alternative text

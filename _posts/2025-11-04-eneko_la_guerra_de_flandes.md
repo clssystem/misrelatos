@@ -7,7 +7,7 @@ categories: [Eneko, Ficción Histórica]
 tags: [Las aventuras de Eneko] 
 keywords: [Eneko Jorajuría, Viaje de retorno a España]
 imageX: '/assets/images/2025/09/vuelaalto.webp'
-excerpt: Un pasaje ficticio de la guerra de Flandes
+description: Un pasaje ficticio de la guerra de Flandes
 order: 5
 ---
 Llevábamos varias jornadas caminando entre nieblas y humedades, sin apenas comer ni descansar, con el maldito frío clavándose en nuestros huesos. Ni siquiera nuestras capas, hechas unos harapos, servían ya para protegernos. 

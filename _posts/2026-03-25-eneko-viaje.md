@@ -8,7 +8,7 @@ comments: true
 categories: [Eneko, Ficción Histórica]
 tags: [Las aventuras de Eneko] 
 keywords: [Eneko Jorajuría, Viaje de retorno a España]
-excerpt: 'Retorno a España desde Flandes'
+description: 'Retorno a España desde Flandes'
 order: 4
 image:
   path: /assets/images/bg-relatos.jpg
