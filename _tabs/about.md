@@ -22,4 +22,4 @@ Espero que disfrutes leyendo este blog tanto como lo hago yo escribiéndolo
 ¡Bienvenido!
 
 ![Una imagen de Antonio Liberal](/assets/images/about.jpg)
-_El titulo de la imagen_
+_Antonio Liberal en la presentación de Mousehelper_
