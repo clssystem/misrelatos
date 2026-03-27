@@ -7,11 +7,11 @@
     }
 </style>
 <div id="cookie-notice"><span>Utilizamos cookies de terceros sólo con fines estadísticos</span>
-    <a data-proofer-ignore id="cookie-notice-accept" class="btn btn-primary btn-sm">Aprobar</a>
-    <a data-proofer-ignore id="cookie-notice-deny" class="btn btn-primary btn-sm">Denegar</a>
-    <a href="{{'/privacidad' | relative_url }}" class="btn btn-primary btn-sm">+Info</a>
-    <a href="https://business.safety.google/privacy/" class="btn btn-primary btn-sm">Privacidad de Google</a> 
-</div>
+    <a  id="cookie-notice-accept" class="btn btn-primary btn-sm">Aprobar</a>
+    <a id="cookie-notice-deny" class="btn btn-primary btn-sm">Denegar</a>
+    <a href= "/privacidad" class="btn btn-primary btn-sm">+Info</a>
+
+<a href= "https://business.safety.google/privacy/" class="btn btn-primary btn-sm">Privacidad de Google</a> 
    
 <script>
     function createCookie(name,value,days) {
@@ -37,25 +37,26 @@
         createCookie(name,"",-1);
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        if(readCookie('Acookie-notice-option')=='true') {
-            consentGrantedAdStorage();
-        } else if (readCookie('Acookie-notice-option')!='false'){
-            document.getElementById('cookie-notice').style.display = 'block';
-        }
+    if(readCookie('Acookie-notice-option')=='true') {
+         
+        consentGrantedAdStorage();
+    
+    } 
+         else if (readCookie('Acookie-notice-option')!='false'){
+        document.getElementById('cookie-notice').style.display = 'block';
+    }
 
-        document.getElementById('cookie-notice-accept').addEventListener("click",function() {
-            createCookie('Acookie-notice-option','true',31);
-            consentGrantedAdStorage();
-            document.getElementById('cookie-notice').style.display = 'none';
-            location.reload();
-        });
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('Acookie-notice-option','true',31);
+        consentGrantedAdStorage();
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
 
-        document.getElementById('cookie-notice-deny').addEventListener("click",function() {
-            createCookie('Acookie-notice-option','false',31);
-            document.getElementById('cookie-notice').style.display = 'none';
-            location.reload();
-        });
+    document.getElementById('cookie-notice-deny').addEventListener("click",function() {
+        createCookie('Acookie-notice-option','false',31);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
     });
 
 </script>
