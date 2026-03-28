@@ -19,7 +19,7 @@ function loadScriptAsync(scriptSrc, callback) {
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
-            gtag('config', '{{site.google_analytics}}', { 'anonymize_ip': true });
+            gtag('config', 'NP2LK2K9BP', { 'anonymize_ip': true });
             gtag('consent', 'default', {
                 'ad_storage': 'denied',
                 'ad_user_data': 'denied',
