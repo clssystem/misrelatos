@@ -61,6 +61,8 @@
   const GA_ID = '{{ site.google_analytics.id }}';
 
   function loadGA() {
+    alert('Cargando Google Analytics con ID: ' + GA_ID); // Debug: Verificar el ID antes de cargar
+    
     if (!GA_ID || GA_ID === "") return;
     
     var script = document.createElement('script');
