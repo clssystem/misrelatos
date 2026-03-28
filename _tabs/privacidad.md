@@ -8,5 +8,7 @@ Este sitio web utiliza las cookies de Google Analytics 4 para obtener informaci�
 
 En ningún caso se utiliza tu nombre, ni tu dirección IP, ni nada que te pueda identificar de manera personal en la red. 
 
+Tienes más información en este [enlace a Google](https://business.safety.google/privacy/)
+
 
 <button onclick="showCookieBanner(event)">Cambiar preferencias</button>
