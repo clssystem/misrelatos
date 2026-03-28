@@ -9,7 +9,9 @@
     name="viewport"
     content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
   >
-	{%include head-google-tag-manager.html %} 
+  {%include head-google-analytics.html %}
+
+  {%include head-google-tag-manager.html %} 
   
   {%- capture seo_tags -%}
     {% seo title=false %}
@@ -138,6 +140,6 @@
   {% endif %}
 
   {% include metadata-hook.html %}
-	{% include head-google-analytics.html %}
+	
     
 </head>
