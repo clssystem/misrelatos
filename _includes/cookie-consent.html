@@ -1,63 +1,97 @@
+<div id="cookie-banner" class="dynamic-banner">
+  <div class="banner-content">
+    <p>Utilizamos cookies para analizar el tráfico y mejorar tu experiencia. 🍪</p>
+    <div class="banner-buttons">
+      <button onclick="acceptCookies()" class="btn btn-primary btn-sm">Aceptar</button>
+      <button onclick="rejectCookies()" class="btn btn-outline-secondary btn-sm">Rechazar</button>
+      <a href="/privacidad" class="btn btn-link btn-sm text-muted">+ Info</a>
+    </div>
+  </div>
+</div>
+
 <style>
-    #cookie-notice {padding: 0.5rem 1rem; display: none; text-align: center; position: fixed; bottom: 0; width: calc(100% - 2rem); background: #222; color: rgba(255,255,255,0.8);}
-    #cookie-notice a {display: inline-block; cursor: pointer; margin-left: 0.5rem;}
-    @media (max-width: 767px) {
-        #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
-        #cookie-notice a {position: relative; bottom: 4px;}
-    }
+  #cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 500px;
+    background-color: var(--main-bg); 
+    color: var(--text-color);
+    border: 1px solid var(--main-border-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    z-index: 1050;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  }
+
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .banner-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .banner-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Ajuste de botones para que se sientan integrados en Chirpy */
+  .banner-buttons .btn {
+    border-radius: 20px;
+    padding: 4px 18px;
+    font-size: 0.85rem;
+  }
 </style>
-<div id="cookie-notice"><span>Utilizamos cookies de terceros sólo con fines estadísticos</span>
-    <a  data-proofer-ignore id="cookie-notice-accept" class="btn btn-primary btn-sm">Aprobar</a>
-    <a data-proofer-ignore id="cookie-notice-deny" class="btn btn-primary btn-sm">Denegar</a>
-    <a href= "/privacidad" class="btn btn-primary btn-sm">+Info</a>
 
-<a href= "https://business.safety.google/privacy/" class="btn btn-primary btn-sm">Privacidad de Google</a> 
-   </div>
 <script>
-    function createCookie(name,value,days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    }
-    function readCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0;i < ca.length;i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1,c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-        }
-        return null;
-    }
-    function eraseCookie(name) {
-        createCookie(name,"",-1);
-    }
+  const GA_ID = '{{ site.google_analytics.id }}';
 
-    if(readCookie('Acookie-notice-option')=='true') {
-         
-        consentGrantedAdStorage();
+  function loadGA() {
+    if (!GA_ID || GA_ID === "") return;
     
-    } 
-         else if (readCookie('Acookie-notice-option')!='false'){
-        document.getElementById('cookie-notice').style.display = 'block';
-    }
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://googletagmanager.com' + GA_ID;
+    document.head.appendChild(script);
 
-    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
-        createCookie('Acookie-notice-option','true',31);
-        consentGrantedAdStorage();
-        document.getElementById('cookie-notice').style.display = 'none';
-        location.reload();
-    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
 
-    document.getElementById('cookie-notice-deny').addEventListener("click",function() {
-        createCookie('Acookie-notice-option','false',31);
-        document.getElementById('cookie-notice').style.display = 'none';
-        location.reload();
-    });
+  // Lógica de carga según estado previo
+  const cookieStatus = localStorage.getItem('cookies-accepted');
 
+  if (cookieStatus === 'true') {
+    loadGA();
+  } else if (cookieStatus === null) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+
+  function acceptCookies() {
+    localStorage.setItem('cookies-accepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+    loadGA();
+  }
+
+  function rejectCookies() {
+    localStorage.setItem('cookies-accepted', 'false');
+    document.getElementById('cookie-banner').style.display = 'none';
+    // No cargamos GA
+  }
 </script>
-
