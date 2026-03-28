@@ -59,15 +59,15 @@
 
 <script>
   const GA_ID = '{{ site.google_analytics.id }}';
-
-  function loadGA() {
     alert('Cargando Google Analytics con ID: ' + GA_ID); // Debug: Verificar el ID antes de cargar
-    
+  function loadGA() {
+
+
     if (!GA_ID || GA_ID === "") return;
     
     var script = document.createElement('script');
     script.async = true;
-    script.src = 'https://googletagmanager.com' + GA_ID;
+    script.src = 'https://googletagmanager.com/gtag/js?id=' + GA_ID;
     document.head.appendChild(script);
 
     window.dataLayer = window.dataLayer || [];
