@@ -6,9 +6,9 @@
   var savedConsent = localStorage.getItem('cookie-consent') === 'granted' ? 'granted' : 'denied';
 
   gtag('consent', 'default', {
-    'ad_storage': savedConsent,
-    'ad_user_data': savedConsent,
-    'ad_personalization': savedConsent,
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
     'analytics_storage': savedConsent
   });
 </script>
