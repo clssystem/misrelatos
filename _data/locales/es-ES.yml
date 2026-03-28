@@ -25,7 +25,7 @@ search:
 panel:
   lastmod: Actualizado recientemente
   trending_tags: Etiquetas populares
-  toc: Contenido
+  toc: 
 
 copyright:
   # Shown at the bottom of the post
@@ -35,10 +35,11 @@ copyright:
     link: https://creativecommons.org/licenses/by/4.0/
 
   # Displayed in the footer
-  brief: 'Salvo que se indique explícitamente, las entradas de este blog están licenciadas bajo la Creative Commons Attribution 4.0 International (CC BY 4.0) License por el autor.'
+  brief: Algunas imágenes pueden estar tomadas de la red. Sus derechos pertenecen a sus autores.
+
   verbose: >-
-    Salvo que se indique explícitamente, las entradas de este blog están licenciadas
-    bajo la Creative Commons Attribution 4.0 International (CC BY 4.0) License por el autor.
+    Las imágenes que acompañan a cada entrada pueden 
+    estar tomadas de internet sin fines comerciales y sus derechos pertenecen a sus autores
 
 meta: Hecho con :PLATFORM usando el tema :THEME
 

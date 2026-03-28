@@ -1,0 +1,14 @@
+<!-- Consent Mode v2 Default Settings -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  var savedConsent = localStorage.getItem('cookie-consent') === 'granted' ? 'granted' : 'denied';
+
+  gtag('consent', 'default', {
+    'ad_storage': savedConsent,
+    'ad_user_data': savedConsent,
+    'ad_personalization': savedConsent,
+    'analytics_storage': savedConsent
+  });
+</script>

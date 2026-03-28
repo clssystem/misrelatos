@@ -10,8 +10,19 @@
     content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
   >
   
-
-  {%include head-google-tag-manager.html %} 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  
+  // Establecer el estado "denied" por defecto para cumplir con RGPD
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+</script>
   
   {%- capture seo_tags -%}
     {% seo title=false %}
@@ -140,5 +151,6 @@
   {% endif %}
 
   {% include metadata-hook.html %}
+  {%include head-google-tag-manager.html %} 
 
 </head>

@@ -17,6 +17,9 @@ layout: compress
   {% include head.html lang=lang %}
 
   <body>
+    
+    {% include body-consent-mode.html %}
+
     {% include body-google-tag-manager.html %}
     {% include sidebar.html lang=lang %}
 
@@ -83,6 +86,6 @@ layout: compress
     {% endfor %}
     
     {% include_cached search-loader.html lang=lang %}
-    {% include cookie-consent.html%}
+    {% include body-cookie-banner.html %}
   </body>
 </html>
