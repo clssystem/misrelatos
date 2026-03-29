@@ -10,7 +10,7 @@ order: 7
     {% for post in updated_posts limit:5 %}
       <li class="py-1">
         <a href="{{ post.url | relative_url }}" class="text-muted">
-          {{ post.title }}
+          [{{post.last_modified_at | default: post.date}}] {{ post.title }}
         </a>
       </li>
     {% endfor %}
