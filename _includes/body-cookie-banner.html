@@ -90,12 +90,11 @@
     
     
 
-    gtag('consent', 'update', {
+    gtag('consent', 'update', { 
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
       'ad_personalization': 'denied',
-      'analytics_storage': consentValue,
-      'wait_for_update': 500      
+      'analytics_storage': consentValue
     });
 
     localStorage.setItem('cookie-consent', status);
