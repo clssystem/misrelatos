@@ -10,13 +10,13 @@ platforms:
     icon: "fab fa-facebook-square"
     link: "https://www.facebook.com/sharer/sharer.php?title=TITLE&u=URL"
 
-  - type: Telegram
-    icon: "fab fa-telegram"
-    link: "https://t.me/share/url?url=URL&text=TITLE"
+  - type: Whatsapp
+    icon: "fab fa-whatsapp" 
+    link: "https://wa.me/send?text=TITLE%20URL"
 
-  - type: Linkedin
-    icon: "fab fa-linkedin"
-    link: "https://www.linkedin.com/feed/?shareActive=true&shareUrl=URL"
+#  - type: Linkedin
+#    icon: "fab fa-linkedin"
+#    link: "https://www.linkedin.com/feed/?shareActive=true&shareUrl=URL"
   
   #
   # - type: Weibo
