@@ -2,7 +2,7 @@
 # the default layout is 'page'
 title: About
 icon: fas fa-info-circle
-order: 6
+order: 60
 image:
   path: /assets/images/bg-relatos.jpg
   alt: image alternative text
