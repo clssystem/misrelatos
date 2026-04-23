@@ -120,7 +120,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: clssystem/wwwChryspi
+    repo: clssystem/misrelatos
     repo_id: R_kgDORn0OrA
     category: Announcements
     category_id: DIC_kwDORn0OrM4C5VZ5
@@ -199,12 +199,12 @@ sass:
 
 compress_html:
   clippings: all
-  comments: all
+  comments: false
   endings: all
   profile: false
   blanklines: false
   ignore:
-    envs: [development]
+    envs: [development, productionX]
 
 exclude:
   - "*.gem"
